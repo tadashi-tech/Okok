@@ -1,0 +1,558 @@
+@font-face {
+    font-family: 'Police';
+    src: url('police.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+   box-sizing: border-box;
+}
+
+
+html {
+   scroll-behavior: smooth;
+}
+
+
+body {
+   margin: 0;
+   font-family: 'Police' ;
+   padding: 25px 15px 40px;
+
+   min-height: 100vh;
+
+   background:
+      radial-gradient(
+         circle at top,
+         #263653 0%,
+         #111827 42%,
+         #080d18 100%
+      );
+
+   color: #f8fafc;
+}
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+.header {
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+
+.sur-titre {
+   margin: 0 0 5px;
+
+   color: #60a5fa;
+
+   font-size: 12px;
+   font-weight: bold;
+
+   letter-spacing: 4px;
+}
+
+
+h1 {
+   margin: 0;
+
+   font-size: 48px;
+   font-weight: 800;
+
+   letter-spacing: 2px;
+
+   background:
+      linear-gradient(
+         90deg,
+         #60a5fa,
+         #a78bfa,
+         #22d3ee
+      );
+
+   -webkit-background-clip: text;
+   background-clip: text;
+
+   color: transparent;
+}
+
+
+.sous-titre {
+   margin: 8px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 14px;
+}
+
+
+/* =========================================
+   BULLETIN PRINCIPAL
+========================================= */
+
+.bulletin {
+   width: 100%;
+   max-width: 600px;
+
+   margin: auto;
+   padding: 20px;
+
+   background:
+      linear-gradient(
+         145deg,
+         rgba(31, 41, 55, 0.97),
+         rgba(15, 23, 42, 0.97)
+      );
+
+   border: 1px solid rgba(148, 163, 184, 0.15);
+
+   border-radius: 24px;
+
+   box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.45),
+      inset 0 1px rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   CATÉGORIES
+========================================= */
+
+.category {
+   position: relative;
+
+   margin-bottom: 20px;
+   padding: 17px;
+
+   background: rgba(15, 23, 42, 0.8);
+
+   border-radius: 17px;
+
+   border: 1px solid rgba(255, 255, 255, 0.05);
+
+   overflow: hidden;
+
+   transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+
+.category::before {
+   content: "";
+
+   position: absolute;
+
+   left: 0;
+   top: 0;
+   bottom: 0;
+
+   width: 4px;
+
+   background: currentColor;
+}
+
+
+.category:hover {
+   transform: translateY(-2px);
+
+   box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.category h2 {
+   margin: 0 0 15px;
+
+   font-size: 19px;
+}
+
+
+/* =========================================
+   COULEURS DES CATÉGORIES
+========================================= */
+
+.scientifique {
+   color: #60a5fa;
+}
+
+
+.litteraire {
+   color: #c084fc;
+}
+
+
+.allemand {
+   color: #facc15;
+}
+
+
+.organisation {
+   color: #fb923c;
+}
+
+
+.physique {
+   color: #4ade80;
+}
+
+
+/* =========================================
+   LIGNE
+========================================= */
+
+.row {
+   display: flex;
+
+   align-items: center;
+
+   gap: 10px;
+
+   min-height: 58px;
+
+   padding: 8px 3px;
+
+   border-bottom:
+      1px solid rgba(148, 163, 184, 0.12);
+}
+
+
+.row:last-child {
+   border-bottom: none;
+}
+
+
+.row p {
+   flex: 1;
+
+   margin: 0;
+
+   color: #e5e7eb;
+
+   font-size: 16px;
+   font-weight: bold;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.row input {
+   padding: 10px 6px;
+
+   border: 1px solid #475569;
+
+   border-radius: 10px;
+
+   background: #111827;
+
+   color: white;
+
+   font-size: 15px;
+   font-weight: bold;
+
+   text-align: center;
+
+   outline: none;
+
+   transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+}
+
+
+.row input::placeholder {
+   color: #64748b;
+}
+
+
+.row input:focus {
+   border-color: #60a5fa;
+
+   background: #172033;
+
+   box-shadow:
+      0 0 0 3px rgba(96, 165, 250, 0.12),
+      0 0 15px rgba(96, 165, 250, 0.15);
+}
+
+
+/* =========================================
+   NOTE / COEFFICIENT
+========================================= */
+
+.note {
+   width: 82px;
+}
+
+
+.coefficient {
+   width: 72px;
+}
+
+
+/* =========================================
+   RÉSULTATS
+========================================= */
+
+.resultat {
+   margin-top: 25px;
+   padding: 20px;
+
+   background:
+      linear-gradient(
+         145deg,
+         rgba(17, 24, 39, 0.95),
+         rgba(30, 41, 59, 0.95)
+      );
+
+   border:
+      1px solid rgba(96, 165, 250, 0.35);
+
+   border-radius: 20px;
+
+   box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.resultat h2 {
+   margin: 0 0 18px;
+
+   text-align: center;
+
+   color: #93c5fd;
+
+   font-size: 20px;
+}
+
+
+/* =========================================
+   GRILLE DES MOYENNES
+========================================= */
+
+.results-grid {
+   display: grid;
+
+   grid-template-columns:
+      repeat(3, 1fr);
+
+   gap: 10px;
+}
+
+
+.moyenne-box {
+   padding: 15px 8px;
+
+   text-align: center;
+
+   background: rgba(15, 23, 42, 0.85);
+
+   border-radius: 14px;
+
+   border: 1px solid rgba(255, 255, 255, 0.07);
+
+   transition: transform 0.2s ease;
+}
+
+
+.moyenne-box:hover {
+   transform: translateY(-3px);
+}
+
+
+.moyenne-box .label {
+   display: block;
+
+   color: #94a3b8;
+
+   font-size: 10px;
+   font-weight: bold;
+
+   letter-spacing: 0.5px;
+}
+
+
+.moyenne-box p {
+   margin: 8px 0 0;
+
+   font-size: 29px;
+   font-weight: 800;
+
+   color: white;
+}
+
+
+.moyenne-box .sur {
+   color: #64748b;
+
+   font-size: 11px;
+}
+
+
+/* =========================================
+   COULEURS DES RÉSULTATS
+========================================= */
+
+.ancien {
+   border-top: 3px solid #f59e0b;
+}
+
+
+.ancien p {
+   color: #fbbf24;
+}
+
+
+.nouveau {
+   border-top: 3px solid #3b82f6;
+}
+
+
+.nouveau p {
+   color: #60a5fa;
+}
+
+
+.personnalise {
+   border-top: 3px solid #a855f7;
+}
+
+
+.personnalise p {
+   color: #c084fc;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+   max-width: 600px;
+
+   margin: 20px auto 0;
+
+   text-align: center;
+}
+
+
+footer p {
+   margin: 0;
+
+   color: #475569;
+
+   font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+   body {
+      padding: 15px 8px 30px;
+   }
+
+
+   .header {
+      margin-bottom: 20px;
+   }
+
+
+   h1 {
+      font-size: 40px;
+   }
+
+
+   .bulletin {
+      padding: 12px;
+
+      border-radius: 20px;
+   }
+
+
+   .category {
+      padding: 13px;
+
+      border-radius: 15px;
+   }
+
+
+   .category h2 {
+      font-size: 17px;
+   }
+
+
+   .row {
+      gap: 6px;
+   }
+
+
+   .row p {
+      font-size: 14px;
+   }
+
+
+   .row input {
+      padding: 9px 3px;
+
+      font-size: 14px;
+   }
+
+
+   .note {
+      width: 68px;
+   }
+
+
+   .coefficient {
+      width: 62px;
+   }
+
+
+   .results-grid {
+      grid-template-columns: 1fr;
+   }
+
+
+   .moyenne-box {
+      display: grid;
+
+      grid-template-columns: 1fr auto auto;
+
+      align-items: center;
+
+      text-align: left;
+
+      padding: 12px 15px;
+   }
+
+
+   .moyenne-box .label {
+      font-size: 10px;
+   }
+
+
+   .moyenne-box p {
+      margin: 0 8px;
+
+      font-size: 25px;
+   }
+
+
+   .moyenne-box .sur {
+      font-size: 10px;
+   }
+
+}
