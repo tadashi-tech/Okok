@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+   <title>Bulletin</title>
+
+   <link rel="stylesheet" href="style.css">
+
+   <script src="script.js" defer></script>
+</head>
+
+
+<body>
+
+   <!-- ===== TITRE ===== -->
+
+   <section class="header">
+
+      <p class="sur-titre">CALCULATEUR DE NOTES</p>
+
+      <h1>Bulletin</h1>
+
+      <p class="sous-titre">
+         Calcule automatiquement tes moyennes
+      </p>
+
+   </section>
+
+
+   <!-- ===== BULLETIN ===== -->
+
+   <section class="bulletin">
+
+
+      <!-- =============================== -->
+      <!-- MATIÈRES SCIENTIFIQUES -->
+      <!-- =============================== -->
+
+      <div class="category scientifique">
+
+         <h2>🔬 Matières scientifiques</h2>
+
+
+         <div class="row">
+
+            <p>Maths</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="5"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>PC</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="5"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>SVT</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="5"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =============================== -->
+      <!-- MATIÈRES LITTÉRAIRES -->
+      <!-- =============================== -->
+
+      <div class="category litteraire">
+
+         <h2>📚 Matières littéraires</h2>
+
+
+         <div class="row">
+
+            <p>Malagasy</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>Français</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>Anglais</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>Philosophie</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =============================== -->
+      <!-- ALLEMAND -->
+      <!-- =============================== -->
+
+      <div class="category allemand">
+
+         <h2>🇩🇪 Langue supplémentaire</h2>
+
+
+         <div class="row">
+
+            <p>Allemand</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="1"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =============================== -->
+      <!-- MATIÈRES D'ORGANISATION -->
+      <!-- =============================== -->
+
+      <div class="category organisation">
+
+         <h2>📖 Matières générales</h2>
+
+
+         <div class="row">
+
+            <p>HG</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+
+         <div class="row">
+
+            <p>SES</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =============================== -->
+      <!-- EPS -->
+      <!-- =============================== -->
+
+      <div class="category physique">
+
+         <h2>🏃 Matière physique</h2>
+
+
+         <div class="row">
+
+            <p>EPS</p>
+
+            <input
+               type="number"
+               class="note"
+               min="0"
+               max="20"
+               step="0.01"
+               placeholder="Note">
+
+            <input
+               type="number"
+               class="coefficient"
+               value="2"
+               min="0"
+               step="1"
+               title="Coefficient">
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =============================== -->
+      <!-- RÉSULTATS -->
+      <!-- =============================== -->
+
+      <div class="resultat">
+
+         <h2>📊 Résultats</h2>
+
+
+         <div class="results-grid">
+
+            <div class="moyenne-box ancien">
+
+               <span class="label">ANCIEN SYSTÈME</span>
+
+               <p id="moyenne-ancien">--</p>
+
+               <span class="sur">/ 20</span>
+
+            </div>
+
+
+            <div class="moyenne-box nouveau">
+
+               <span class="label">NOUVEAU SYSTÈME</span>
+
+               <p id="moyenne-nouveau">--</p>
+
+               <span class="sur">/ 20</span>
+
+            </div>
+
+
+            <div class="moyenne-box personnalise">
+
+               <span class="label">PERSONNALISÉ</span>
+
+               <p id="moyenne-personnalise">--</p>
+
+               <span class="sur">/ 20</span>
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+   </section>
+
+
+   <footer>
+      <p>Calcul automatique • Notes sur 20</p>
+   </footer>
+
+</body>
+
+</html>
